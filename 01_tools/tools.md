@@ -70,6 +70,12 @@ Linux之父Linus在02年花了两周写了Git, 成为了流行的分布式版本
 
 CVS是最早且开源的集中式, 提交问题较多, SVN也是开源的集中式, 目前用的最多,修复了前者一些问题
 
+```shell
+$ ssh-keygen -t rsa -C "gaolushaobing@gmail.com" # 生成SSH 
+```
+
+然后在用户主目录里找到`.ssh`目录，里面有`id_rsa`和`id_rsa.pub`两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公共, 提交在Git仓库
+
 
 
 
@@ -90,6 +96,7 @@ $ git help -a # 查看所有命令
 $ git help -g # 简单的使用手册目录 attributes everyday etc.
 $ git help attributes #弹出本地html页面显示attributes详细内容
 $ git help add #弹出本地页显示add指令文档 
+$ git clone # 克隆地址
 ```
 
 > 目前版本的git是新弹出html页面, 之前文档信息显示在控制台, 翻页B 退出Q

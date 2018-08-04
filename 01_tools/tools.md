@@ -172,7 +172,7 @@ $ git log
 
 ---
 
-### diff
+### diff different 
 
 ```shell
 # 修改文件后查看文件状态

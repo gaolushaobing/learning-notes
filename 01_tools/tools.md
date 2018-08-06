@@ -208,4 +208,26 @@ $ git mv tongyaojia.css 01_tools/css
 $ git mv tongyaojia.css 01_tools/css
 ```
 
+---
+
+### rm remove 删除Git中跟踪的文件
+
+既可以在文件系统中把文件删除, 再用rm命令把文件从git目录中删除掉, 还可以直接用git的rm命令删除文件, 删除多个用空格把不用的文件名字隔开, 如果要删除整个目录,包括目录里面的文件,可以加上一个`-r`的参数,表示递归, 
+
+```shell
+$ git rm -r css/
+$ git rm index.html
+# 执行后直接就是在暂存区有
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
+
+            deleted:    css/tongyaojia.css
+            deleted:    index.html
+$ git commit -m 'delete file'
+```
+
+
+
+
+
 

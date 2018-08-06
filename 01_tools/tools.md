@@ -434,7 +434,34 @@ git push -u origin master
 ```
 
 ```shell
-git remote #查看远程
+git remote #查看远程 fetch (提取)
+git remote -v # 查看详细信息
+git remote -rm 名称 # 移除远程
+```
+
+---
+
+### push 本地推送到远程
+
+`-u` 参数意思是跟踪远程分支的变化
+
+- `$ git push -u origin master` 第一次要输入用户名和密码
+
+```shell
+$ git branch -a # 查看所有分支
+$ git branch -r # 查看远程分支
+```
+
+---
+
+### remote-workflow 使用远程版本库流程
+
+- download 单纯的下载项目代码
+- git clone 如果需要项目的版本库就使用该指令, 可以查看项目所有的提交
+- fork 到自己的账户下面, 再clone到自己本地, 然后自己开发 
+- pull request 向远程提交自己的修改, 对方可以拒绝或采纳
+- contributors 成为项目的贡献者, 需要所有者添加
+
 
 
 

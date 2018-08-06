@@ -226,6 +226,22 @@ $ git rm index.html
 $ git commit -m 'delete file'
 ```
 
+使用`rm`指令之前, 要确定这个文件已经被追踪了. 并且没有将要提交的修改, 如果修改后还没有提交, git是无法进行删除的, 需要先`add` 添加修改,然后提交以后再删除, 
+
+
+---
+
+### HEAD (头部,log头部,暗指最近的操作 checkout'检测'的意思)
+`rm` 删除后,在暂存区显示deleted:xxxx 如果这个时候还没有提交, 想要改变主意的话
+
+```shell
+# 从暂存区回复到工作区
+$  git checkout HEAD -- index.html
+
+# 恢复删除并提交过的文件
+# 需要恢复到上一次提交的状态
+$ git checkout HEAD^ # 这表示最近的上一次提交 两个^^就是上两次提交
+```
 
 
 

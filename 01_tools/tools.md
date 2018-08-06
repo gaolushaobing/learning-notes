@@ -251,7 +251,7 @@ $ git checkout HEAD^ # 这表示最近的上一次提交 两个^^就是上两次
 $ git revert 分支号
 ```
 
-
+测试是否小时
 
 
 

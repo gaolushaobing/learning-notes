@@ -243,6 +243,15 @@ $  git checkout HEAD -- index.html
 $ git checkout HEAD^ # 这表示最近的上一次提交 两个^^就是上两次提交
 ```
 
+---
+
+### revert恢复到某一个提交
+
+```shell
+$ git revert 分支号
+```
+
+
 
 
 

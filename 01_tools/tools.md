@@ -174,10 +174,12 @@ $ git log
 
 ### diff different 
 
+diff比较的是暂存区与工作区之间的不同,
+
 ```shell
 # 修改文件后查看文件状态 (tools.md)
 $ git status # modified修改的文件 还未暂存
 $ git diff tools.md # 查看修改前后的区别, 加文件就是该文件明细, 不加就是所有
 $ git add 01_tools/tools.md
-
+$ git diff --staged ## 查看暂存区和版本库之间的区别
 ```

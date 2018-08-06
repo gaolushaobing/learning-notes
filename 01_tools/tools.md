@@ -175,14 +175,9 @@ $ git log
 ### diff different 
 
 ```shell
-# 修改文件后查看文件状态
-$ git status
-    On branch master # 主分支上
-    Changes not staged for commit: #修改但还没提交到暂存
-      (use "git add <file>..." to update ..)
-      (use "git checkout -- <file>..." to discard ..)
+# 修改文件后查看文件状态 (tools.md)
+$ git status # modified修改的文件 还未暂存
+$ git diff tools.md # 查看修改前后的区别, 加文件就是该文件明细, 不加就是所有
+$ git add 01_tools/tools.md
 
-            modified:   index.html #修改的文件
-
-    no changes added to commit (use "git add" and/or "git commit -a")
 ```

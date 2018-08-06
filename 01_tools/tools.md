@@ -331,8 +331,111 @@ $ git log --oneline --all -10 --graph
 # 加 -m 参数, 然后输入旧名字和新名字, 中间用空格隔开
 $ git branch -m bugfix newbugfix 
 
-# 加-d 后跟分支名称就是删除分支
+# 加-d 后跟分支名称就是删除分支 多条用空格隔开
+$ git branch -d dele dele-rest
 ```
+
+---
+
+### stash (藏匿 存储)
+
+stash可以暂时把修改保存到一个地方, 然后继续修改其他地方,等需要用到这个修改的时候再拿出来
+
+`$ git stash save '描述信息'`
+
+执行完该指令以后, 使用 `$ git status` 是查看不到状态的, 想要查看已经的贮藏, 需要用到`$ git stash list` 来查看
+
+如果想要对不一下区别, 就是使用: `$ git stash show -p stash@{0}`  *-p是以补丁的方式*
+
+如果要应用到工作进度: `$ git stash apply stash@{0}`
+
+如果想要删除就使用:  `$ git stash drop stash@{0}`
+
+---
+
+### log 日志
+
+> 进入长文模式的时候 使用 **F** 键可以进行翻页, 使用 **B** 键是进行向上翻页, 按下 **Q** 是退出当前显示
+
+```shell
+$ git log # 默认显示的详细的提交记录, 做着 信息 ID号
+$ git log --oneline #单行显示
+$ git log --oneline -5 # 控制输出的行数
+$ git log --oneline -5 --author='gaolushaobing' #筛选作者
+$ git log --oneline --grep='index.html' # 搜索的方式
+$ git log --oneline --before='2018-08-05' # 指定某时间之前的提交
+$ git log --oneline --before='1 week' # 一周前
+$ git log --oneline --before='2 days' # 两天前
+$ git log --oneline --graph # 加入图形效果
+$ git help log # 可以查看关于log的更多文档, 就是有点长, 太长了.
+```
+
+---
+
+### alias 别名, 给经常用的指令添加别名(快捷名字)
+
+使用alias 可以简化输入的指令, 设置别名用的是 `git config --global alias.co checkout`
+
+保存的别名配置会保存在 `.gitconfig` 文件内 可以使用 `$ cat ~/.gitconfig` 来查看
+
+---
+
+### ignore 驳回诉讼 忽略的文件
+
+如果有不想让git跟踪的文件, 可以在全局设置里面设置
+
+```shell
+$ git config --global core.excludesfile ~/.gitignore_global
+$ vim ~/.gitignore_global # 输入要忽略的文件名
+```
+
+另外忽略的文件可以参考[gist.github.com/octocat/9257657](gist.github.com/octocat/9257657)
+
+---
+
+### gitignore 为每个项目创建忽略的列表
+
+```shell
+# 先进入到项目的根目录, 然后用vim创建
+$ vim .gitignore
+*.log
+```
+
+他不会已经跟踪的文件, 可以先rm删除.
+
+此外还可以参考模版: [github.com/github/gitignore](github.com/github/gitignore)
+
+---
+
+### remote (远程) 
+
+我们可以把本地的项目推送到远程仓库,
+
+---
+
+### origin (源点 开端)
+
+在github上创建好项目后 ->
+
+```shell
+# 本地新建
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://xxxxxx.git
+git push -u origin master
+```
+
+```shell
+# 本地已有的项目推送
+git remote add origin https://......xxx.git
+git push -u origin master
+```
+
+```shell
+git remote #查看远程
+
 
 
 

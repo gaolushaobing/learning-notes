@@ -282,7 +282,7 @@ $ git revert 分支号
 
 可以再切回 `master` 分支 `$ git checkout master`( **切换分支** )
 
-`$ git log --oneline --all` 可以查看所以分支的提交.
+`$ git log --oneline --all (可选显示的数量-n) (可选图标 --graph)` **可以查看所以分支的提交**.
 
 
 ---
@@ -297,7 +297,47 @@ $ git revert 分支号
 
 如果我们在分支的提交也想应用到主分支, 先查看当前分支`git branch` 然后切换到 主分支
 
-`$ git merge 要合并的分支名称` 
+`$ git merge 要合并的分支名称`  因为master没有做新的提交, 所以合并模式是fast-forward.
+
+---
+
+### merge 合并
+
+如果创建分支后, 分支进行了提交, 而切回master后, 也进行了提交, 这个时候, master与分支刚开始创建的时候不一样, 这个时候的合并其实就是真正的提交, 而这个提交有时候会遇到冲突, 这个时候就需要去解决冲突以后再合并, 
+
+> 如果想快速进行暂存和提交可以使用一个快捷方式 ` $git commit -am '描述信息'`
+
+```shell
+# 先用图表查看一下目前分支的区别
+$ git log --oneline --all -3 --graph
+```
+
+`$ git merge 分支名称` 然后合并提交
+---
+
+### conflict (冲突, 矛盾 手工解决)
+
+使用`abort` 就是放弃合并 本身单词是流产, 终止计划等等,如果有冲突就在编辑器里进行选择,然后进行提交,`git add .`  然后在 `git commit` 不需要穿参数
+
+```shell
+$ git log --oneline --all -10 --graph
+```
+
+---
+
+### rm 删除/重命名分支
+
+```shell
+# 加 -m 参数, 然后输入旧名字和新名字, 中间用空格隔开
+$ git branch -m bugfix newbugfix 
+
+# 加-d 后跟分支名称就是删除分支
+```
+
+
+
+
+
 
 
 

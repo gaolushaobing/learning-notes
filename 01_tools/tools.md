@@ -188,3 +188,24 @@ $ git diff --staged ## 查看暂存区和版本库之间的区别
 
 ### rename 重命名
 
+```shell
+# 在编辑器里重命名文件后, 会提示删除了一个文件, 然后新增了未跟踪文件
+$ git status
+$ git rm style.css
+$ git add theme.css
+```
+
+---
+
+### mv 重命名或者移动
+
+```shell
+$ git mv theme.css tongyaojia.css
+# 修改名字会在暂存区, 可以直接提交修改
+# git不跟踪文件夹, 除非此文件夹包含文件, 也就是说git不会跟踪空白目录
+# 可以创建文件夹然后移动文件
+$ git mv tongyaojia.css 01_tools/css
+$ git mv tongyaojia.css 01_tools/css
+```
+
+

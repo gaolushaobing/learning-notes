@@ -79,7 +79,7 @@ $ ssh-keygen -t rsa -C "gaolushaobing@gmail.com" # 生成SSH
 
 
 
-![](./images/gitindex.jpg)
+![](./01_tools/images/gitindex.jpg)
 
 git的大部分工作是把文件在工作区,暂存区和版本库中移来移去, 例如`git add`是把文件从工作区复制到暂存区, `git commit`又把文件从暂存区复制/提交到版本库
 

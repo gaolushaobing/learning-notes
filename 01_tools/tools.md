@@ -521,8 +521,13 @@ $ git branch -r # 查看远程分支
 - git show v1.0.1
 - git tag -a v1.0.2 -m '注释'
 
-这是v1.0.3才能看到
-这是v1.0.4才能看到
+最后使用`git checkout tag名/分支名 来切换.
+
+- `git tag -a tagName 对应的提交ID` 绑定tag名字
+- `git tag -d tagName` 删除标签
+- `git push --tags` 推送本地所有标签
+
+
 
 
 

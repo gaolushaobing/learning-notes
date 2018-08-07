@@ -521,7 +521,7 @@ $ git branch -r # 查看远程分支
 - git show v1.0.1
 - git tag -a v1.0.2 -m '注释'
 
-
+这是v1.0.3才能看到
 
 
 

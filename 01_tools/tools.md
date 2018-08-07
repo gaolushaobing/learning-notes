@@ -228,7 +228,6 @@ $ git commit -m 'delete file'
 
 使用`rm`指令之前, 要确定这个文件已经被追踪了. 并且没有将要提交的修改, 如果修改后还没有提交, git是无法进行删除的, 需要先`add` 添加修改,然后提交以后再删除, 
 
-
 ---
 
 ### HEAD (头部,log头部,暗指最近的操作 checkout'检测'的意思)
@@ -284,7 +283,6 @@ $ git revert 分支号
 
 `$ git log --oneline --all (可选显示的数量-n) (可选图标 --graph)` **可以查看所以分支的提交**.
 
-
 ---
 
 ### branch diff 查看分支的区别
@@ -312,7 +310,10 @@ $ git revert 分支号
 $ git log --oneline --all -3 --graph
 ```
 
+```shell
 `$ git merge 分支名称` 然后合并提交
+```
+
 ---
 
 ### conflict (冲突, 矛盾 手工解决)

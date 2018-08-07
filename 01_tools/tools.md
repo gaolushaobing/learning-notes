@@ -510,6 +510,16 @@ $ git branch -r # 查看远程分支
 - `History` 可以查看历史提交记录
 - `Repository settings` 可以设置远程版本库的地址以及忽略跟踪的文件.
 
+---
+
+### tag 项目标签
+
+不同的标签指向不同时期的提交
+
+- git tag
+- git tag v1.0.1
+- git show v1.0.1
+
 
 
 

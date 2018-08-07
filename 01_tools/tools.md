@@ -519,6 +519,9 @@ $ git branch -r # 查看远程分支
 - git tag
 - git tag v1.0.1
 - git show v1.0.1
+- git tag -a v1.0.2 -m '注释'
+
+
 
 
 

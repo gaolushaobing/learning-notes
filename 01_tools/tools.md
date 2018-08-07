@@ -484,6 +484,35 @@ $ git branch -r # 查看远程分支
 
 > 项目的根目录的README.md 文件会自动在根目录下, 并且github会自动的把其编译成HTML的格式, 放在项目的页面下方.
 
+---
+
+### pull requests (合并请求) 
+
+如果想为不是自己所有的远程版本库进行提交, 且自己不是项目的贡献者的话, 可以做一个`pull requests`  **(合并请求)** 所有者收到这个信息的话, 他们可以选择是否合并.
+
+- 在自己的项目中, 点击`pull requests`后 再点击 `New Pull requests` 
+- 依据自己和远程版本的区别进行编辑,然后添加标题和描述,然后点击发送
+
+作为远程项目拥有者, 可以在版本旁边看到Pull Requests 的请求, 点击发来的请求中的`Commits` , `Files changed`中可以查看发生变化的文件, 如果选择接受, 可以合并. 
+
+---
+
+### collaborator (合作者, 项目贡献者) 
+
+如果想要多人合作一个项目, 
+
+- 添加用户到项目的贡献者列表, `Settings` -> `Collaborator` -> 
+
+### git desktop (git桌面应用工具)
+
+- 登录
+- 添加本地版本库
+- `History` 可以查看历史提交记录
+- `Repository settings` 可以设置远程版本库的地址以及忽略跟踪的文件.
+
+
+
+
 
 
 

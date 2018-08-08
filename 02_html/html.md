@@ -376,3 +376,216 @@ HTML中的内联元素有:
 ## HTML class类属性
 
 `class` 属性为HTML元素指定一个或多个类名, CSS和JavaScript可以使用类名来为具有指定类名的元素执行某些任务, 在CSS中, 要选择具有特定类的元素, 用 `.` 字符后跟类的名称
+
+```html
+<style>
+.city {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+} 
+</style>
+
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+```
+
+> class属性可用于任何HTML元素
+> 类名区分大小写
+
+---
+
+### 多个类
+
+HTML 元素可以有多个类名, 每个类名必须用空格分割
+
+---
+
+## HTML id属性
+
+`id` 属性指定HTML元素唯一的ID
+
+---
+
+## HTML iframe (网页中显示网页)
+
+使用`<iframe>`标记定义 HTML iframe:
+
+```html
+<iframe src="URL"></iframe>
+```
+
+使用`height`和`width`属性指定iframe的大小, 单位是像素, 也可以是百分比
+
+或者使用CSS来设置iframe的高度和宽度
+
+默认情况下, iframe周围有边框, 使用`style`的CSS`border`属性来删除
+
+### iframe链接的按钮
+
+可以点击链接,然后立即在框架中打开, `target`链接的属性必须引用iframe的`name`属性
+
+```html
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+```
+
+---
+
+## HTML JavaScript
+
+JavaScript使HTML页面更具有动态性和交互性
+
+---
+
+## HTML 头
+
+### HTML `<head>` 元素
+
+`<head>` 元素是元数据的容器 (关于数据的数据), 放置在`<html>`标签和`< body>`之间, 通常定义文档标题, 字符集, 样式, 链接, 脚本和其他元信息:
+
+`<title>`, `<style>`, `<meta>`, `<link>`, `<script>`, `<base>`
+
+---
+
+### HTML `<title>` 元素
+
+`<title>`元素定义文档的标题, 且在所有HTML/XHTML文档中都是必须的
+
+- 在浏览器选项卡中定义标题
+- 在将页面添加到收藏夹时为页面提供标题
+- 在搜索引擎结果中显示该页面的标题
+
+---
+
+### HTML `<style>` 元素
+
+`<style>` 元素用于定义单个HTML页面的样式信息:
+
+---
+
+### HTML `<link>` 元素
+
+`<link>` 元素用于链接到外部样式表
+
+```html
+<link rel="stylesheet" href="mystyle.css">
+```
+
+---
+
+### HTML `<meta>` 元素
+
+`<meta>` 元素用于指定使用的字符集, 页面描述, 关键字, 作者和其他元数据
+
+```html
+<!-- 字符集 -->
+<meta charset="UTF-8">
+
+<!-- 网页描述 -->
+<meta name="description" content="Free Web tutorials">
+
+<!-- 搜索引擎定义关键字 -->
+<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+
+<!-- 页面作者 -->
+<meta name="author" content="John Doe">
+
+<!-- 每30秒刷新一次文档 -->
+<meta http-equiv="refresh" content="30">
+```
+
+---
+
+### 设置视口
+
+HTML5 引入了一种方法, 让Web设计人员通过`<meta>`标记控制视口.
+
+视口是用户在网页上的可见区域, 它随设备而变化, 在手机上比在电脑屏幕上小
+
+`<meta>`在所有网页中包含以下视口元素
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+一个`<meta>`视口元素对如何控制网页的尺寸和缩放浏览器的说明.
+
+width = device-width 将页面宽度设置为遵循设备的屏幕宽度 (具体取决于设备)
+
+initial-scale = 1.0 设置浏览器首次加载页面时的初始缩放级别
+
+---
+
+### HTML `<script>` 元素
+
+`<script>` 元素用于定义客户端JavaScript
+
+---
+
+### HTML `<base>` 元素
+
+`<base>` 元素指定页面中所有相对URL的基本打开方法
+
+```html
+<base href="https://www.w3schools.com/images/" target="_blank">
+```
+
+### 省略`<html>` `<head>` `<body>`
+
+HTML5标准可以省略这三个标签, 但是不建议这么做, 虽然现在有很多人省略`<head>`
+
+---
+
+## HTML 布局
+
+### 布局元素
+
+网站通常以多列(如杂志或报纸)显示内容, HTML5提供了定义网页不同部分的新语义元素
+
+- `<header>` - 定义文档标题 
+- `<nav>` - 定义导航链接的容器
+- `<section>` - 定义文档中的部分
+- `<article>` - 定义一个独立的文章
+- `<aside>` - 定义除内容之外的内容(如侧边栏)
+- `<footer>` - 为文档或部分定义页脚
+- `<details>` - 定义其他详细信息
+- `<summary>` - 定义`<details>`元素的标题
+
+---
+
+### HTML 布局技术
+
+创建多列布局有四种不同的方法, 每种方法都有其优点和缺点
+
+- HTML表格(不推荐)
+- CSS浮动属性
+- CSS flexbox
+- CSS框架
+
+---
+
+#### HTML表格
+
+`<table>`元素不是设计为布局工具! `<table>` 元素的目的是显示表格数据, 所以不要使用表格进行页面布局! 它们会给你的代码带来麻烦.
+
+#### CSS框架
+
+使用W3.CSS 或者 Bootstrap等框架
+
+#### CSS浮动
+
+使用CSS浮动属性执行整个Web布局是很常见的, Float易于学习 - 你只需要记住浮动和清楚属性的工作原理. **缺点:** 浮动元素与文档流相关联, 这可能会损害灵活性
+
+#### CSS Flexbox
+
+Flexbox是CSS3中的一种新布局模式
+
+当页面布局必须适应不同的屏幕尺寸和不同的显示设备时, 试用flexbox可确保元素的行为可预测. **缺点:** 在IE10及更早版本中不起作用

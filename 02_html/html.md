@@ -589,3 +589,151 @@ HTML5标准可以省略这三个标签, 但是不建议这么做, 虽然现在�
 Flexbox是CSS3中的一种新布局模式
 
 当页面布局必须适应不同的屏幕尺寸和不同的显示设备时, 试用flexbox可确保元素的行为可预测. **缺点:** 在IE10及更早版本中不起作用
+
+---
+
+## HTML响应式网页设计
+
+响应式Web设计是关于使用HTML和CSS自动调整大小, 隐藏, 缩放, 使其在所有设备(台式机, 平板电脑和手机)上看起来都很好
+
+> 任何设备都应该看起来不错!
+
+### 设置视口
+
+制作响应式网页时, 请`<meta>`在所有网页添加以下元素:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+这将设置页面的视口, 这将为浏览器提供有关如何控制页面尺寸和缩放的说明
+
+---
+
+### 响应式图像
+
+响应式图像是可以很好地缩放以适合浏览器大小的图像
+
+#### 使用width属性
+
+如果CSS `width`属性设置为100%, 则图像将响应并向上和向下扩展
+
+```html
+<img src="img_girl.jpg" style="width:100%;">
+```
+
+在上面的设置中, 图像可以放大到大于其原始大小, 在许多情况下, 更好的解决方案是使用`max-width`属性, 如果`max-width`属性设置为100%, 则图像将缩小(如果必须), 但从不缩放到大于其原始大小
+
+```html
+<img src="img_girl.jpg" style="max-width:100%;height:auto;">
+```
+
+---
+
+### 根据浏览器宽度显示不同的图像
+
+HTML `<picture>`元素允许你为不同的浏览器窗口大小定义不同的图像
+
+```html
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_smallflower.jpg" alt="Flowers">
+</picture>
+```
+
+---
+
+### 响应文本
+
+可以使用"vm"单位设置文本大小, 这意味着"视口宽度"
+
+这样文本大小将遵循浏览器窗口的大小
+
+```html
+<h1 style="font-size:10vw">Hello World</h1>
+```
+
+调整浏览器窗口的大小以查看文本大小的缩放方式。
+
+在调整文本大小时使用“vw”单位。10vw将大小设置为视口宽度的10％。
+
+> Viewport是浏览器窗口大小, 1vm = 视口宽度的1%, 如果视口宽50厘米, 则1vm为0.5厘米
+
+---
+
+### 媒体查询
+
+除了调整文本和图像的大小之外, 在响应式网页中使用媒体查询也很常见
+
+使用媒体查询, 你可以为不同的浏览器大小定义完全不同的样式
+
+```html
+<style>
+.left, .right {
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+```
+
+### 使用W3.CSS 或者 bootstrap框架
+
+---
+
+## HTML 代码元素
+
+- `<code>` 元素定义了计算机代码片段, 因为无法有额外空行和空格, 外面可以包`<pre>`
+- `<kbd>` 一般用于键盘输入的内容
+- `<samp>` 元素表示来自程序或计算系统的输出
+- `<var>` 元素定义一个变量
+
+---
+
+## HTML 实体字符
+
+HTML有的保留字符必须替换为字符实体,否则无法正常显示, 因为与标记混合
+
+| Result | Description | Entity Name | Entity Number |
+|--- | --- | --- | --- | 
+| ` ` | `non-breaking space` | `&nbsp;` | `&#160;` |
+| `<` | `less than` | `&lt;` | `&#60;` |
+| `>` | `greater than` | `&gt;` | `&#62;` |
+
+> 实体名称区分大小写
+
+---
+
+## HTML 字符集
+
+HTML4
+
+```html
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+```
+
+HTML5
+
+```html
+<meta charset="UTF-8">
+```
+
+CSS样式表的字符集
+
+```css
+@charset "UTF-8";
+```
+

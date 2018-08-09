@@ -737,3 +737,28 @@ CSS样式表的字符集
 @charset "UTF-8";
 ```
 
+---
+
+### HTML 统一资源定位符
+
+---
+
+URL是网址的另一个词, URL可以由单词(w3schools.com) 或Internet协议(IP)地址(192.68.20.50)组成
+
+大多数人在冲浪时输入名称, 因为名字比数字更容易记住
+
+```
+scheme://prefix.domain:port/path/filename
+```
+
+- scheme - 定义internet服务的类型 (最常见的是http或https)
+- prefix - 定义域前缀 (www)
+- port - 定义主机上的端口号 (默认80 可省略)
+- path - 在服务器上定义路径(如果省略, 就是站点的根目录)
+- filename - 定义文档或资源的名称
+
+---
+
+### 常见的URL方案
+
+

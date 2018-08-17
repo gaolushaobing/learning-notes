@@ -61,6 +61,11 @@ Document Object Model是针对XML但经过扩展后, 用于HTML的应用程序�
 
 > DOM并不只针对JavaScript, 其他语言也有实现DOM的, 只不过在Web浏览器中, DOM已经成为了JavaScript重要组成部分.
 
+DOM1级的主要目标是映射文档的结构，`DOM 2级`扩充了鼠标和用户界面事件、范围、遍历等细分模块，且增加了对CSS的支持
+
+---
+
+#### 1.2.3 浏览器对象模型
 
 
 
